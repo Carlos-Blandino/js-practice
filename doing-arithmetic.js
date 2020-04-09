@@ -13,7 +13,7 @@ Return: 10
 
 */
 
-function do_math(number1, number2, operator) {
+function doMath(number1, number2, operator) {
     var result = null;
     switch (operator) {
         case '*':
@@ -34,4 +34,4 @@ function do_math(number1, number2, operator) {
             console.log('Input error, please try again');
     }
 }
-console.log(do_math(2, 5, '*'));
+console.log(doMath(2, 5, '*'));
