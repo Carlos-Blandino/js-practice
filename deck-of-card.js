@@ -33,9 +33,9 @@ const deckOfCards = {
         // Need to hold the drawn cards
         const cards = [];
         // Iterate thru the number of cards
-        for (let card of numberOfCards) {
+        for (let card = 0; card < numberOfCards; card++) {
             // In each iteration place the card in to the drawn card pile
-            cards.push(this.drawCard);
+            cards.push(this.drawCard());
         }
         return cards;
 
