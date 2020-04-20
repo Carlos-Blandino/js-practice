@@ -40,5 +40,26 @@ const deckOfCards = {
         return cards;
 
         // After iterating return the drawn cards
+    },
+    shuffleDeck() {
+        //deconstructing
+        const { deck, getRandom } = this;
+
+        for (let i = 0; i < deck.length; i++) {
+            let random1 = getRandom(deck.length);
+            console.log(random1);
+            let random2 = getRandom(deck.length);
+            while (random2 == random1) {
+                random2 = getRandom(deck.length);
+            }
+            console.log(random2);
+            //swap
+            [deck[random1], deck[random2]] = [deck[random2], deck[random1]];
+
+            console.log(deck);
+        }
+    },
+    getRandom(num) {
+        return Math.floor(Math.random() * num);
     }
 };
