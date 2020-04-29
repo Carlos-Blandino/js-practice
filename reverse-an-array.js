@@ -22,3 +22,14 @@ function reverseArray(inputArray) {
     return tempArray;
 }
 console.log(reverseArray(myArray));
+
+function reverseAnArray(inputArray) {
+    let tempArray = [];
+    let tempStr = ' ';
+    for (let i = 0; i < inputArray.length; i++) {
+        tempStr = ' ' + inputArray[i] + tempStr;
+    }
+    return tempStr.trim().split(' ');
+}
+
+console.log(reverseAnArray(['dog', 'cat', 'bird', 'mouse']));
