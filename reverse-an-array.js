@@ -32,4 +32,4 @@ function reverseAnArray(inputArray) {
     return tempStr.trim().split(' ');
 }
 
-console.log(reverseAnArray(['dog', 'cat', 'bird', 'mouse']));
+console.log(reverseAnArray(myArray));
