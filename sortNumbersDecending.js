@@ -21,6 +21,20 @@ function sortNumbersDecending(numbers) {
 	return numbers;
 }
 
-console.log(
-	sortNumbersDecending([ 10, 8, 22, 3, 9, 11, 4, 34, 55, 122, 0, 66 ])
-);
+let numbers = sortNumbersDecending([
+	10,
+	8,
+	22,
+	3,
+	9,
+	11,
+	4,
+	34,
+	55,
+	122,
+	0,
+	66
+]);
+for (num of numbers) {
+	console.log(num);
+}
