@@ -41,7 +41,7 @@ const newStrings = strings.map(function(str) {
 console.log(newStrings);
 
 /*
-	Using find() array method 
+	Using find() array method to locate and return first matching the criteria
 */
 
 let phrases = [
@@ -57,3 +57,13 @@ let phrases = [
 const nicePhrases = phrases.find((phrase) => phrase.indexOf('Nice') === 0);
 
 const goPhrase = phrases.find((phrase) => phrase.includes('go'));
+
+/*
+	Using filter to create a new array from the results of a 
+    callback function for each element, the original array 
+    stays unchanged	
+*/
+
+let oddArray = nums.filter((num) => num % 2 === 1);
+
+let greaterThan38 = nums.filter((num) => num > 38 && num % 2 !== 1);
