@@ -39,3 +39,21 @@ const newStrings = strings.map(function(str) {
 });
 
 console.log(newStrings);
+
+/*
+	Using find() array method 
+*/
+
+let phrases = [
+	'Happy birthday',
+	'go home',
+	"It's not late",
+	"Don't give up",
+	'Nice weather',
+	'Nice dog',
+	"It's falling apart"
+];
+
+const nicePhrases = phrases.find((phrase) => phrase.indexOf('Nice') === 0);
+
+const goPhrase = phrases.find((phrase) => phrase.includes('go'));
