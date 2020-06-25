@@ -85,3 +85,33 @@ let isLastCharD = fourLetterWords.every(
 	(char) => char[char.length - 1] === 'k'
 );
 console.log(isLastCharD);
+
+/*
+	Sort() method
+*/
+// used the slice() method to make a copy so as to not mutate the array
+let newNums2 = nums.slice().sort((a, b) => b - a);
+console.log(newNums2);
+console.log(nums);
+
+/* 
+	Using reduce() method
+*/
+
+const accumulator = nums.reduce((previousVal, currentVal, currentIndex) => {
+	console.log(`current index is: ${currentIndex}`);
+	return previousVal + currentVal;
+});
+console.log(accumulator);
+
+const findMax = nums.reduce((previousVal, currentVal) => {
+	if (currentVal > previousVal) return currentVal;
+	return previousVal;
+});
+console.log(`max value is ${findMax}`);
+
+const findMin = nums.reduce((prevVal, currentVal) => {
+	return Math.min(prevVal, currentVal);
+});
+
+console.log(`min val is ${findMin}`);
