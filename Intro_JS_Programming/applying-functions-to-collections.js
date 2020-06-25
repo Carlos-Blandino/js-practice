@@ -59,11 +59,29 @@ const nicePhrases = phrases.find((phrase) => phrase.indexOf('Nice') === 0);
 const goPhrase = phrases.find((phrase) => phrase.includes('go'));
 
 /*
-	Using filter to create a new array from the results of a 
+	Using filter() method to create a new array from the results of a 
     callback function for each element, the original array 
     stays unchanged	
 */
-
+// array of odd numbers
 let oddArray = nums.filter((num) => num % 2 === 1);
-
+// numbers greater than 38 and not an odd number
 let greaterThan38 = nums.filter((num) => num > 38 && num % 2 !== 1);
+
+/*
+	Using every() method to test whether all elements in the array pass
+	the callback function conditions
+*/
+
+const fourLetterWords = [ 'donk', 'honk', 'tonk', 'monk', 'konk', 'donky' ];
+let isThreeChars = fourLetterWords.every((str) => str.length === 3);
+console.log(isThreeChars);
+//verses some() which passes true if only one element passes condition
+let isThreeChars2 = fourLetterWords.some((str) => str.length === 5);
+console.log(isThreeChars2);
+
+// check every element in array if it ends with 'k'
+let isLastCharD = fourLetterWords.every(
+	(char) => char[char.length - 1] === 'k'
+);
+console.log(isLastCharD);
