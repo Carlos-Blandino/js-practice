@@ -1,19 +1,15 @@
 function deletingDuplicatesInArray(items) {
     let resultArray = []
-    let currentNum = items[0]
-    items.unshift()
 
     for( let i = 0; i < items.length; i++) {
         for( let j = 0 ; j < items.length; j++){
-            if (currentNum === items[j]){
+
                 if (resultArray.includes(items[i])){
-                    items.unshift()
+                    break;
                 } else {
                     resultArray.push(items[i])
-                    currentNum = items[i]
-                    items.unshift()
                 }
-            }
+
         }
 
     }
