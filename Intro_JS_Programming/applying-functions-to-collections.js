@@ -95,7 +95,7 @@ console.log(newNums2);
 console.log(nums);
 
 /* 
-	Using reduce() method
+	Using reduce() method to reduce data to something more specific
 */
 
 const accumulator = nums.reduce((previousVal, currentVal, currentIndex) => {
@@ -114,4 +114,4 @@ const findMin = nums.reduce((prevVal, currentVal) => {
 	return Math.min(prevVal, currentVal);
 });
 
-console.log(`min val is ${findMin}`);
+console.log(`min val is: ${findMin}`);
