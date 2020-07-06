@@ -61,3 +61,19 @@ const squareShape = {
 };
 
 console.log(squareShape);
+
+// applying rest parameters and spread in function call
+
+function sumItUp2(num1, num2, ...nums) {
+	let result = 0;
+	// for (let i = 0; i < arguments.length; i++) {
+	// 	result += arguments[i];
+	// }
+	// return result;
+	for (num of nums) {
+		result = result + num;
+	}
+	return result + num1 + num2;
+}
+let myArray2 = [ 2, 3, 4, 5, 5 ];
+console.log(`The sum of [2,3,4,5] is ${sumItUp2(10, 20, ...myArray2)}`);
