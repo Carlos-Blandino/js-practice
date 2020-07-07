@@ -66,14 +66,24 @@ console.log(squareShape);
 
 function sumItUp2(num1, num2, ...nums) {
 	let result = 0;
-	// for (let i = 0; i < arguments.length; i++) {
-	// 	result += arguments[i];
-	// }
-	// return result;
+
 	for (num of nums) {
 		result = result + num;
 	}
 	return result + num1 + num2;
 }
 let myArray2 = [ 2, 3, 4, 5, 5 ];
-console.log(`The sum of [2,3,4,5] is ${sumItUp2(10, 20, ...myArray2)}`);
+console.log(
+	`The sum of num1, num2 and nums is ${sumItUp2(10, 20, ...myArray2)}`
+);
+
+// applying destructuring to arrays, objects, and parameters
+
+// destructuring arrays
+const myColors = [ 'red', 'blue', 'white', 'green' ];
+
+const [ colorOfBlood, , colorOfInnocense ] = myColors;
+
+console.log(
+	`The color of blood is ${colorOfBlood} and the color of purity is ${colorOfInnocense}`
+);
