@@ -123,3 +123,13 @@ const [ { model: theFastetCar }, , { model: theBestTruck } ] = myCars;
 console.log(
 	`${theFastetCar} is the best all around muscle car, while the ${theBestTruck} is the number one car in America`
 );
+
+// destructuring parameters
+
+function truckOfTheYear({ model, make }) {
+	console.log(`The ${make}, ${model} is the truck of the year`);
+}
+
+const truck = { make: 'Ford', model: 'F-150', color: 'red' };
+
+truckOfTheYear(truck);
