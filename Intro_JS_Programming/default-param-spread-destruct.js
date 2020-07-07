@@ -87,3 +87,39 @@ const [ colorOfBlood, , colorOfInnocense ] = myColors;
 console.log(
 	`The color of blood is ${colorOfBlood} and the color of purity is ${colorOfInnocense}`
 );
+
+// destructuring objects
+const employeeOfTheYear = {
+	first: 'Carlos',
+	last: 'Blandino',
+	ssn: '0599',
+	dob: '02/10/1969',
+	salary: 55000
+};
+
+const {
+	first: firstName,
+	last: lastName,
+	salary,
+	...others
+} = employeeOfTheYear;
+
+console.log(
+	`${firstName} ${lastName}'s salary of ${salary} is due for pay raise`
+);
+
+console.log(`The others are dob: ${others.dob} and ssn: ${others.ssn}`);
+
+// destructuring a nested object
+
+const myCars = [
+	{ make: 'Ford', model: 'Mustang' },
+	{ make: 'Ford', model: 'F-150' },
+	{ make: 'Honda', model: 'Civic' }
+];
+
+const [ { model: theFastetCar }, , { model: theBestTruck } ] = myCars;
+
+console.log(
+	`${theFastetCar} is the best all around muscle car, while the ${theBestTruck} is the number one car in America`
+);
