@@ -34,9 +34,24 @@ console.log(`the villain is ${cast.villain}`);
 */
 
 const speak = {
-	angryTo: (name) => {
+	angryTo: function(name) {
 		console.log(`${name} stop acting like a jerk`);
 	}
 };
 
 speak.angryTo('Mark');
+
+/* 
+    Using a shorthand when adding methods to objects
+*/
+
+const greet = {
+	birthdayTo(name) {
+		console.log(`Happybirthday ${name}`);
+	},
+	chirstmasTo(name) {
+		console.log(`Merry Christmas ${name}`);
+	}
+};
+
+greet.birthdayTo('John');
