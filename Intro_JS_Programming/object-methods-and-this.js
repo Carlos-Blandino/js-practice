@@ -28,3 +28,15 @@ const cast = {
 };
 
 console.log(`the villain is ${cast.villain}`);
+
+/*
+    Adding Methods to Objects
+*/
+
+const speak = {
+	angryTo: (name) => {
+		console.log(`${name} stop acting like a jerk`);
+	}
+};
+
+speak.angryTo('Mark');
