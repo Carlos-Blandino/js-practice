@@ -55,3 +55,18 @@ const greet = {
 };
 
 greet.birthdayTo('John');
+
+/*
+    Using 'this' in object methods
+*/
+let make = 'Nissan';
+const car = {
+	model: 'Mustang',
+	make: 'Ford',
+	fullName() {
+		const { make, model } = this;
+		console.log(`${make} ${model}`);
+	}
+};
+
+car.fullName();
