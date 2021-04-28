@@ -33,6 +33,9 @@ describe("Power", () => {
   });
 });
 
+power(10,-2) throw Error exponent should be >= 0
+ * Return base raised to the power exponent.
+ 
  */
 function power(base, exponent) {
     if(exponent < 0)  throw("exponent should be >= 0")
