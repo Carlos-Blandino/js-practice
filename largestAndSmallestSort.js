@@ -5,13 +5,12 @@
     if(numbers.length === 0) return []
     numbers.sort((a,b) => a > b ? 1 : -1)
     if(numbers[0] < 0 && numbers[numbers.length - 1] < 0){
-      return [numbers[numbers.length - 1],numbers[0]];
-    } else {
         return [numbers[0],numbers[numbers.length - 1]];
     }
-  
   }
-  
+
+ console.log('numbers', largestAndSmallestSort([-2,-4,-1,-9,-6]))
+
   /**
    * Implement an algorithm that uses iteration to find the smallest and largest
    */
