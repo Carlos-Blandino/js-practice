@@ -16,3 +16,58 @@ function anagramGroups(words) {
     return Object.values(lookupTable);
 
 }
+
+function firstSingleCharacter(word) {
+    if (word.length === 0) {
+        return null;
+    }
+
+    let strArray = word.split("");
+
+    const letterLookup = {};
+
+    for (let i = 0; i < word.length; i++) {
+        letterLookup[word[i]] = (letterLookup[word[i]] || 0 ) + 1
+    }
+    for (let key in letterLookup) {
+        if (letterLookup[key] === 1) {
+            return key;
+        }
+    }
+    return null;
+
+}
+
+function anagram(s1, s2) {
+    if (s1.length !== s2.length) {
+        return false;
+    }
+    let temp1 = s1.toLowerCase().split("");
+    temp1.sort();
+    // console.log('1', temp1)
+    let temp2 =  s2.toLowerCase().split("");
+    temp2.sort();
+    // console.log('2', temp2)
+
+    for (let i = 0; i < s1.length; i++) {
+        if (temp1[i] !== temp2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+function permutationPalindrome(word) {
+    const charSet = new Set();
+
+    word.split("").forEach((char) => {
+        if (charSet.has(char)) {
+            charSet.delete(char);
+        } else {
+            charSet.add(char);
+        }
+    });
+
+    return charSet.size <= 1;
+}
+
+

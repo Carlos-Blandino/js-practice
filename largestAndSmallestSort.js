@@ -8,7 +8,6 @@
         return [numbers[0],numbers[numbers.length - 1]];
     }
   }
-
  console.log('numbers', largestAndSmallestSort([-2,-4,-1,-9,-6]))
 
   /**
